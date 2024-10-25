@@ -1,0 +1,11 @@
+curl -X GET -H "Authorization: Bearer sk-57a5f1e917be4bf5b316c746a273262b" 
+
+curl -X 'GET' 'http://localhost:8080/api/v1/auths/api_key' -H 'accept: application/json" -H "Authorization: Bearer sk-57a5f1e917be4bf5b316c746a273262b'
+
+curl -H 'accept: application/json' -H 'Authorization: Bearer sk-57a5f1e917be4bf5b316c746a273262b' -X 'GET' 'http://localhost:8080/api/v1/prompts/' 
+
+curl -X POST -H "Authorization: Bearer sk-57a5f1e917be4bf5b316c746a273262b" -H 'Content-Type: application/json' http://localhost:8080/ollama/api/generate -d '{ "model": "llama3:latest", "prompt": "Why is the sky blue?", "stream": false }'
+
+curl -X POST -H "Authorization: Bearer sk-57a5f1e917be4bf5b316c746a273262b" -H 'Content-Type: application/json' http://localhost:8080/ollama/api/generate -d '{ "model": "llama3:latest", "prompt": "Compare these two statements: \"The young cat is damp.\" \"The kitten is wet.\" If they have the same general meaning, return only true. Otherwise, return only false. Never return anything other than true or false.", "stream": false }'
+
+
